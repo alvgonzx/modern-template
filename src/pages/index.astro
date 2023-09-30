@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 
 import Header from '../components/header.astro';
-import Title from '../components/title.astro';
 import Navbar from '../components/navbar.astro';
 import Hero from '../components/hero.astro';
 import Gradient from '../components/gradient.astro';
 import Button from '../components/button.astro';
+import ButtonContainer from '../components/button-container.astro';
 
 const links: { name: string; href: string; button: boolean }[] = [
     {
@@ -35,25 +35,24 @@ const links: { name: string; href: string; button: boolean }[] = [
 <Layout title="Modern Template">
     <main>
         <Header>
-            <Title>Lorem Ipsum Inc.</Title>
+            <h1 class="text-xl font-bold">Lorem Ipsum Inc.</h1>
             <Navbar links={links} />
         </Header>
         <Hero>
             <div>
-                <p class="text-4xl font-bold">
+                <p class="text-3xl lg:text-4xl font-bold">
                     Lorem ipsum dolor sit amet <Gradient>consectetur</Gradient>
                 </p>
-                <p class="font-medium text-lg mt-2">
+                <p class="font-medium text-md lg:text-lg mt-2">
                     Proin sed massa vitae ipsum malesuada fringilla. Hendrerit
                     risus tincidunt.
                 </p>
-
-                <div class="mt-8 flex flex-row justify-center lg:justify-normal items-center gap-6">
+                <ButtonContainer>
                     <Button href="#">Contacto</Button>
                     <p class="text-sm">
                         Más de 50 personas ya nos han contactado hoy
                     </p>
-                </div>
+                </ButtonContainer>
             </div>
             <img src="/typewriter.svg" />
         </Hero>
